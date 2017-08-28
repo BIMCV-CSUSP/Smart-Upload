@@ -1,0 +1,7 @@
+Diffusion tensor imaging (DTI) use different gradient directions so that different images are sensitive to specific directions.
+
+In order to process this data with medINRIA or FSL, you need to extract the diffusion direction information as well as the images.
+
+For these images, dcm2nii will attempt to generate .bvec and .bval text files.
+
+This information is extracted from the DICOM header (for Siemens data the software attempts to read the "B_value" and "DiffusionGradientDirection" fields from the CSA header).

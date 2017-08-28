@@ -1,0 +1,328 @@
+<script>
+<!-- Subdireccion General de Sistemas de Informacion para la Salud -->
+<!-- Centro de Excelencia e Innovacion Tecnologica de Bioimagen de la Conselleria de Sanitat -->
+<!-- http://ceib.san.gva.es/ -->
+<!-- Maria de la Iglesia Vaya -->
+<!-- Angel Fernandez-Canada Vilata -->
+<!-- Jorge Isnardo Altamirano -->
+<!-- It is up to the user to inspect and clean all tags of PHI -->
+<!-- Profile RETAIN_LONG_FULL_DATES applied -->
+<!-- Profile RETAIN_PATIENT_CHARS applied -->
+<!-- Profile RETAIN_DEVICE_IDENT applied -->
+<!-- Profile RETAIN_UIDS applied -->
+<!-- Profile BASIC applied -->
+<!-- Some special attribute cases and non standard are checked due particular purposes -->
+<!-- Works with CTP version 2015.04.10 -->
+<p t="NOTICE1">IMPORTANT: Be sure to review Series Descriptions for PHI.</p>
+<p t="NOTICE2">IMPORTANT: Tags inside of sequences may contain PHI.</p>
+<p t="PROFILENAME">CEIBANON</p>
+<p t="PROJECTNAME">XNAT_Project_ID</p>
+<p t="SITEID">1</p>
+<p t="SITENAME">http://ceib.bioinfo.cipf.es/xnat</p>
+<p t="SUBJECT">XNAT_Project_ID subjects</p>
+<p t="TRIALNAME">Trial</p>
+<p t="UIDROOT">1.3.6.1.4.1.14519.5.2.1.9999.9999</p>
+<e en="T" t="00081110" n="Referenced Study Sequence">@keep()</e>
+<e en="T" t="40080119" n="Distribution Name">@remove()</e>
+<e en="T" t="00402008" n="Order Entered By">@remove()</e>
+<e en="T" t="00081050" n="Performing Physicians' Name">@remove()</e>
+<e en="T" t="00083010" n="Irradiation Event UID">@keep()</e>
+<e en="T" t="04000550" n="Modified Attributes Sequence">@remove()</e>
+<e en="T" t="00380061" n="Issuer of Service Episode ID">@remove()</e>
+<e en="T" t="00400011" n="Scheduled Procedure Step Location">@keep()</e>
+<e en="T" t="00001000" n="Affected SOP Instance UID">@keep()</e>
+<e en="T" t="00400005" n="Scheduled Procedure Step End Time">@keep()</e>
+<e en="T" t="00100032" n="Patient's Birth Time">@remove()</e>
+<e en="T" t="0040A171" n="Observation UID">@keep()</e>
+<e en="T" t="0040A07C" n="Custodial Organization Sequence">@remove()</e>
+<e en="T" t="00181030" n="Protocol Name">@always()@contents(ProtocolName,"\W+")</e>
+<e en="T" t="00080034" n="Overlay Time">@keep()</e>
+<e en="T" t="0040A307" n="Current Observer (Trial)">@remove()</e>
+<e en="T" t="00404050" n="Performed Procedure Step Start DateTime">@keep()</e>
+<e en="T" t="00081060" n="Name of Physician(s) Reading Study">@remove()</e>
+<e en="T" t="04000561" n="Original Attributes Sequence">@remove()</e>
+<e en="T" t="00404036" n="Human Performers Organization">@remove()</e>
+<e en="T" t="00080080" n="Institution Name">@remove()</e>
+<e en="T" t="00209164" n="Dimension Organization UID">@keep()</e>
+<e en="T" t="00181007" n="Cassette ID">@keep()</e>
+<e en="T" t="00101005" n="Patient's Birth Name">@remove()</e>
+<e en="T" t="00184000" n="Acquisition Comments">@remove()</e>
+<e en="T" t="00380004" n="Referenced Patient Alias Sequence">@remove()</e>
+<e en="T" t="00080201" n="Timezone Offset From UTC">@keep()</e>
+<e en="T" t="00001001" n="Requested SOP Instance UID">@keep()</e>
+<e en="T" t="00400253" n="Performed Procedure Step ID">@remove()</e>
+<e en="T" t="00101060" n="Patient's Mother's Birth Name">@remove()</e>
+<e en="T" t="00402001" n="Reason for the Imaging Service Request">@remove()</e>
+<e en="T" t="00080024" n="Overlay Date">@keep()</e>
+<e en="T" t="0038001E" n="Scheduled Patient Institution Residence">@remove()</e>
+<e en="T" t="00101002" n="Other Patient IDs Sequence">@remove()</e>
+<e en="T" t="0040A088" n="Verifying Observer Identification Code Sequence">@remove()</e>
+<e en="T" t="00081052" n="Performing Physician Identification Sequence">@remove()</e>
+<e en="T" t="00189424" n="Acquisition Protocol Description">@remove()</e>
+<e en="T" t="04000100" n="Digital Signature UID">@remove()</e>
+<e en="T" t="00404011" n="Expected Completion DateTime">@keep()</e>
+<e en="T" t="00081140" n="Referenced Image Sequence">@keep()</e>
+<e en="T" t="00102110" n="Allergies">@empty()</e>
+<e en="T" t="00700084" n="Content Creator's Name">@empty()</e>
+<e en="T" t="00400243" n="Performed Location">@remove()</e>
+<e en="T" t="0040A07A" n="Participant Sequence">@remove()</e>
+<e en="T" t="00380020" n="Admitting Date">@keep()</e>
+<e en="T" t="00401011" n="Intended Recipients of Results Identification Sequence">@remove()</e>
+<e en="T" t="40080111" n="Interpretation Approver Sequence">@remove()</e>
+<e en="T" t="00080058" n="Failed SOP Instance UID List">@keep()</e>
+<e en="T" t="0040000B" n="Scheduled Performing Physician Identification Sequence">@remove()</e>
+<e en="T" t="00101050" n="Insurance Plan Identification">@remove()</e>
+<e en="T" t="00080094" n="Referring Physician's Telephone Numbers">@remove()</e>
+<e en="T" t="00404030" n="Performed Station Geographic Location Code Sequence">@keep()</e>
+<e en="T" t="4008011A" n="Distribution Address">@remove()</e>
+<e en="T" t="00080082" n="Institution Code Sequence">@remove()</e>
+<e en="T" t="00209158" n="Frame Comments">@remove()</e>
+<e en="T" t="0040A073" n="Verifying Observer Sequence">@remove()</e>
+<e en="T" t="00401004" n="Patient Transport Arrangements">@remove()</e>
+<e en="T" t="00081030" n="Study Description">@always()@contents(this,".+","XNAT_Project_ID")</e>
+<e en="T" t="00181005" n="Generator ID">@keep()</e>
+<e en="T" t="00102203" n="Patient Sex Neutered">@keep()</e>
+<e en="T" t="00401103" n="Person Telephone Numbers">@remove()</e>
+<e en="T" t="00400007" n="Scheduled Procedure Step Description">@remove()</e>
+<e en="T" t="00100050" n="Patient's Insurance Plan Code Sequence">@remove()</e>
+<e en="T" t="00321060" n="Requested Procedure Description">@remove()</e>
+<e en="T" t="00321021" n="Scheduled Study Location AE Title">@keep()</e>
+<e en="T" t="00200200" n="Synchronization Frame of Reference UID">@keep()</e>
+<e en="T" t="0008103E" n="Series Description">@always()@contents(SeriesDescription,"\W+")</e>
+<e en="T" t="00404023" n="Referenced General Purpose Scheduled Procedure Step Transaction UID">@keep()</e>
+<e en="T" t="00084000" n="Identifying Comments">@remove()</e>
+<e en="T" t="0040A078" n="Author Observer Sequence">@remove()</e>
+<e en="T" t="0040A353" n="Address (Trial)">@remove()</e>
+<e en="T" t="00181002" n="Device UID">@keep()</e>
+<e en="T" t="00402016" n="Placer Order Number / Imaging Service Request">@empty()</e>
+<e en="T" t="40080115" n="Interpretation Diagnosis Description">@remove()</e>
+<e en="T" t="00081062" n="Physician(s) Reading Study Identification Sequence">@remove()</e>
+<e en="T" t="001021B0" n="Additional Patient's History">@remove()</e>
+<e en="T" t="0040A730" n="Content Sequence">@remove()</e>
+<e en="T" t="00100020" n="Patient ID">@hash(this, 64)</e>
+<e en="T" t="00102299" n="Responsible Organization">@remove()</e>
+<e en="T" t="00101080" n="Military Rank">@remove()</e>
+<e en="T" t="0040A192" n="Observation Date (Trial)">@keep()</e>
+<e en="T" t="00700001" n="Graphic Annotation Sequence">@remove()</e>
+<e en="T" t="00080030" n="Study Time">@keep()</e>
+<e en="T" t="00081084" n="Admitting Diagnoses Code Sequence">@remove()</e>
+<e en="T" t="00324000" n="Study Comments">@remove()</e>
+<e en="T" t="00321030" n="Reason for Study">@remove()</e>
+<e en="T" t="00080092" n="Referring Physician's Address">@remove()</e>
+<e en="T" t="001021A0" n="Smoking Status">@keep()</e>
+<e en="T" t="00400002" n="Scheduled Procedure Step Start Date">@keep()</e>
+<e en="T" t="40080202" n="Interpretation ID Issuer">@remove()</e>
+<e en="T" t="00404028" n="Performed Station Name Code Sequence">@keep()</e>
+<e en="T" t="00100101" n="Patient's Primary Language Code Sequence">@remove()</e>
+<e en="T" t="60XX4000" n="Overlay Comments">@remove()</e>
+<e en="T" t="00281199" n="Palette Color Lookup Table UID">@keep()</e>
+<e en="T" t="00401101" n="Person Identification Code Sequence">@remove()</e>
+<e en="T" t="00321033" n="Requesting Service">@remove()</e>
+<e en="T" t="00080023" n="Content Date">@keep()</e>
+<e en="T" t="00081049" n="Physician(s) of Record Identification Sequence">@remove()</e>
+<e en="T" t="0020000E" n="Series Instance UID">@keep()</e>
+<e en="T" t="00404035" n="Actual Human Performers Sequence">@remove()</e>
+<e en="T" t="00080032" n="Acquisition Time">@keep()</e>
+<e en="T" t="00209161" n="Concatenation UID">@keep()</e>
+<e en="T" t="00181000" n="Device Serial Number">@keep()</e>
+<e en="T" t="0040A123" n="Person Name">@empty()</e>
+<e en="T" t="00081040" n="Institutional Department Name">@remove()</e>
+<e en="T" t="0040A402" n="Observation Subject UID (Trial)">@keep()</e>
+<e en="T" t="FFFAFFFA" n="Digital Signatures Sequence">@remove()</e>
+<e en="T" t="00400245" n="Performed Procedure Step Start Time">@keep()</e>
+<e en="T" t="40000010" n="Arbitrary">@remove()</e>
+<e en="T" t="00880912" n="Topic Keywords">@remove()</e>
+<e en="T" t="00189516" n="Start Acquisition DateTime">@keep()</e>
+<e en="T" t="00102154" n="Patient's Telephone Numbers">@remove()</e>
+<e en="T" t="00080015" n="Instance Coercion DateTime">@keep()</e>
+<e en="T" t="300A0013" n="Dose Reference UID">@keep()</e>
+<e en="T" t="40080118" n="Results Distribution List Sequence">@remove()</e>
+<e en="T" t="00081111" n="Referenced Performed Procedure Step Sequence">@keep()</e>
+<e en="T" t="00281214" n="Large Palette Color Lookup Table UID">@keep()</e>
+<e en="T" t="00404005" n="Scheduled Procedure Step Start DateTime">@keep()</e>
+<e en="T" t="00081010" n="Station Name">@keep()</e>
+<e en="T" t="0040A027" n="Verifying Organization">@remove()</e>
+<e en="T" t="00100040" n="Patient's Sex">@keep()</e>
+<e en="T" t="00400012" n="Pre-Medication">@empty()</e>
+<e en="T" t="00080090" n="Referring Physician's Name">@empty()</e>
+<e en="T" t="04000404" n="MAC">@remove()</e>
+<e en="T" t="00081080" n="Admitting Diagnoses Description">@remove()</e>
+<e en="T" t="00400004" n="Scheduled Procedure Step End Date">@keep()</e>
+<e en="T" t="00400275" n="Request Attributes Sequence">@remove()</e>
+<e en="T" t="0040A172" n="Referenced Observation UID (Trial)">@keep()</e>
+<e en="T" t="00320012" n="Study ID Issuer">@remove()</e>
+<e en="T" t="00089123" n="Creator Version UID">@keep()</e>
+<e en="T" t="04000403" n="Referenced SOP Instance MAC Sequence">@remove()</e>
+<e en="T" t="00080035" n="Curve Time">@keep()</e>
+<e en="T" t="00404051" n="Performed Procedure Step End DateTime">@keep()</e>
+<e en="T" t="0040A358" n="Verbal Source Identifier Code Sequence (Trial)">@remove()</e>
+<e en="T" t="00200010" n="Study ID">@empty()</e>
+<e en="T" t="0040A124" n="UID">@hashuid(@UIDROOT,this)</e>
+<e en="T" t="00080021" n="Series Date">@keep()</e>
+<e en="T" t="40080102" n="Interpretation Recorder">@remove()</e>
+<e en="T" t="00384000" n="Visit Comments">@remove()</e>
+<e en="T" t="00404037" n="Human Performers Name">@remove()</e>
+<e en="T" t="00203401" n="Modifying Device ID">@remove()</e>
+<e en="T" t="00404027" n="Scheduled Station Geographic Location Code Sequence">@keep()</e>
+<e en="T" t="40084000" n="Results Comments">@remove()</e>
+<e en="T" t="00401400" n="Requested Procedure Comments">@remove()</e>
+<e en="T" t="00104000" n="Patient Comments">@remove()</e>
+<e en="T" t="0040DB0C" n="Template Extension Organization UID">@keep()</e>
+<e en="T" t="20300020" n="Text String">@remove()</e>
+<e en="T" t="00101000" n="Other Patient IDs">@remove()</e>
+<e en="T" t="00380050" n="Special Needs">@empty()</e>
+<e en="T" t="4008010B" n="Interpretation Text">@remove()</e>
+<e en="T" t="00284000" n="Image Presentation Comments">@remove()</e>
+<e en="T" t="00380011" n="Issuer of Admission ID">@remove()</e>
+<e en="T" t="00404010" n="Scheduled Procedure Step Modification DateTime">@keep()</e>
+<e en="T" t="00880200" n="Icon Image Sequence(see Note 12)">@remove()</e>
+<e en="T" t="00101100" n="Referenced Patient Photo Sequence">@remove()</e>
+<e en="T" t="00020003" n="Media Storage SOP Instance UID">@keep()</e>
+<e en="T" t="00400250" n="Performed Procedure Step End Date">@keep()</e>
+<e en="T" t="0008002A" n="Acquisition DateTime">@keep()</e>
+<e en="T" t="001021D0" n="Last Menstrual Date">@keep()</e>
+<e en="T" t="00102160" n="Ethnic Group">@keep()</e>
+<e en="T" t="00880910" n="Topic Author">@remove()</e>
+<e en="T" t="00181008" n="Gantry ID">@keep()</e>
+<e en="T" t="40080300" n="Impressions">@remove()</e>
+<e en="T" t="00400555" n="Acquisition Context Sequence">@remove()</e>
+<e en="T" t="00402009" n="Order Enterer Location">@remove()</e>
+<e en="T" t="FFFCFFFC" n="Data Set Trailing Padding">@remove()</e>
+<e en="T" t="00380060" n="Service Episode ID">@remove()</e>
+<e en="T" t="00101020" n="Patient's Size">@keep()</e>
+<e en="T" t="60XX3000" n="Overlay Data">@remove()</e>
+<e en="T" t="00400010" n="Scheduled Station Name">@keep()</e>
+<e en="T" t="00401001" n="Requested Procedure ID">@remove()</e>
+<e en="T" t="00321070" n="Requested Contrast Agent">@remove()</e>
+<e en="T" t="00180010" n="Contrast Bolus Agent">@empty()</e>
+<e en="T" t="00380021" n="Admitting Time">@keep()</e>
+<e en="T" t="00401010" n="Names of Intended Recipient of Results">@remove()</e>
+<e en="T" t="00102150" n="Country of Residence">@remove()</e>
+<e en="T" t="00401005" n="Requested Procedure Location">@remove()</e>
+<e en="T" t="00080081" n="Institution Address">@remove()</e>
+<e en="T" t="00081072" n="Operators' Identification Sequence">@remove()</e>
+<e en="T" t="00404025" n="Scheduled Station Name Code Sequence">@keep()</e>
+<e en="T" t="00181004" n="Plate ID">@keep()</e>
+<e en="T" t="00380500" n="Patient State">@empty()</e>
+<e en="T" t="00400006" n="Scheduled Performing Physician Name">@remove()</e>
+<e en="T" t="00401102" n="Person Address">@remove()</e>
+<e en="T" t="00081195" n="Transaction UID">@keep()</e>
+<e en="T" t="00100010" n="Patient's Name">@hash(this, 64)</e>
+<e en="T" t="00321020" n="Scheduled Study Location">@keep()</e>
+<e en="T" t="0040A075" n="Verifying Observer Name">@empty()</e>
+<e en="T" t="00880904" n="Topic Title">@remove()</e>
+<e en="T" t="00101090" n="Medical Record Locator">@remove()</e>
+<e en="T" t="300600C2" n="Related Frame of Reference UID">@keep()</e>
+<e en="T" t="0040A354" n="Telephone Number (Trial)">@remove()</e>
+<e en="T" t="00200052" n="Frame of Reference UID">@keep()</e>
+<e en="T" t="00080025" n="Curve Date">@keep()</e>
+<e en="T" t="00402017" n="Filler Order Number / Imaging Service Request">@empty()</e>
+<e en="T" t="40080114" n="Physician Approving Interpretation">@remove()</e>
+<e en="T" t="40080042" n="Results ID Issuer">@remove()</e>
+<e en="T" t="00182042" n="Target UID">@keep()</e>
+<e en="T" t="00081155" n="Referenced SOP Instance UID">@keep()</e>
+<e en="T" t="00380062" n="Service Episode Description">@remove()</e>
+<e en="T" t="001021F0" n="Patient's Religious Preference">@remove()</e>
+<e en="T" t="30060024" n="Referenced Frame of Reference UID">@keep()</e>
+<e en="T" t="00100021" n="Issuer of Patient ID">@remove()</e>
+<e en="T" t="00041511" n="Referenced SOP Instance UID in File">@keep()</e>
+<e en="T" t="001021C0" n="Pregnancy Status">@keep()</e>
+<e en="T" t="00400241" n="Performed Station AE Title">@keep()</e>
+<e en="T" t="0040A193" n="Observation Time (Trial)">@keep()</e>
+<e en="T" t="00080050" n="Accession Number">@empty()</e>
+<e en="T" t="00080018" n="SOP Instance UID">@keep()</e>
+<e en="T" t="00203406" n="Modified Image Description">@remove()</e>
+<e en="T" t="00380400" n="Patient's Institution Residence">@remove()</e>
+<e en="T" t="00080031" n="Series Time">@keep()</e>
+<e en="T" t="30080105" n="Source Serial Number">@keep()</e>
+<e en="T" t="00102152" n="Region of Residence">@remove()</e>
+<e en="T" t="00400001" n="Scheduled Station AE Title">@keep()</e>
+<e en="T" t="00081070" n="Operators' Name">@remove()</e>
+<e en="T" t="0018700A" n="Detector ID">@keep()</e>
+<e en="T" t="00080022" n="Acquisition Date">@keep()</e>
+<e en="T" t="0020000D" n="Study Instance UID">@keep()</e>
+<e en="T" t="00400254" n="Performed Procedure Step Description">@remove()</e>
+<e en="T" t="00880906" n="Topic Subject">@remove()</e>
+<e en="T" t="00080033" n="Content Time">@keep()</e>
+<e en="T" t="00203404" n="Modifying Device Manufacturer">@remove()</e>
+<e en="T" t="0040A352" n="Verbal Source (Trial)">@remove()</e>
+<e en="T" t="00380010" n="Admission ID">@remove()</e>
+<e en="T" t="00101001" n="Other Patient Names">@remove()</e>
+<e en="T" t="0040DB0D" n="Template Extension Creator UID">@keep()</e>
+<e en="T" t="00101010" n="Patient's Age">@keep()</e>
+<e en="T" t="00102180" n="Occupation">@remove()</e>
+<e en="T" t="4008010A" n="Interpretation Transcriber">@remove()</e>
+<e en="T" t="00189517" n="End Acquisition DateTime">@keep()</e>
+<e en="T" t="00400244" n="Performed Procedure Step Start Date">@keep()</e>
+<e en="T" t="00100030" n="Patient's Birth Date">@keep()</e>
+<e en="T" t="00082112" n="Source Image Sequence">@keep()</e>
+<e en="T" t="00101081" n="Branch of Service">@remove()</e>
+<e en="T" t="00204000" n="Image Comments">@remove()</e>
+<e en="T" t="00101040" n="Patient Address">@remove()</e>
+<e en="T" t="00102297" n="Responsible Person">@remove()</e>
+<e en="T" t="00400280" n="Comments on the Performed Procedure Step">@remove()</e>
+<e en="T" t="00380300" n="Current Patient Location">@remove()</e>
+<e en="T" t="00400003" n="Scheduled Procedure Step Start Time">@keep()</e>
+<e en="T" t="04000402" n="Referenced Digital Signature Sequence">@remove()</e>
+<e en="T" t="00321032" n="Requesting Physician">@remove()</e>
+<e en="T" t="00404052" n="Procedure Step Cancellation DateTime">@keep()</e>
+<e en="T" t="00080020" n="Study Date">@keep()</e>
+<e en="T" t="00402010" n="Order Callback Phone Number">@remove()</e>
+<e en="T" t="00081048" n="Physician(s) of Record">@remove()</e>
+<e en="T" t="00404034" n="Scheduled Human Performers Sequence">@remove()</e>
+<e en="T" t="00403001" n="Confidentiality Constraint on Patient Data Description">@remove()</e>
+<e en="T" t="00080014" n="Instance Creator UID">@keep()</e>
+<e en="T" t="0070031A" n="Fiducial UID">@keep()</e>
+<e en="T" t="0008010D" n="Context Group Extension Creator UID">@keep()</e>
+<e en="T" t="00081120" n="Referenced Patient Sequence">@remove()</e>
+<e en="T" t="4008010C" n="Interpretation Author">@remove()</e>
+<e en="T" t="40004000" n="Text Comments">@remove()</e>
+<e en="T" t="00181400" n="Acquisition Device Processing Description">@remove()</e>
+<e en="T" t="00700086" n="Content Creator's Identification Code Sequence">@remove()</e>
+<e en="T" t="00400242" n="Performed Station Name">@keep()</e>
+<e en="T" t="00101030" n="Patient's Weight">@keep()</e>
+<e en="T" t="00100102" n="Patient's Primary Language Modifier Code Sequence">@remove()</e>
+<e en="T" t="00880140" n="Storage Media File-set UID">@keep()</e>
+<e en="T" t="300E0008" n="Reviewer Name">@remove()</e>
+<e en="T" t="00380040" n="Discharge Diagnosis Description">@remove()</e>
+<e en="T" t="00402400" n="Imaging Service Request Comments">@remove()</e>
+<e en="T" t="00080096" n="Referring Physician's Identification Sequence">@remove()</e>
+<e en="T" t="00400251" n="Performed Procedure Step End Time">@keep()</e>
+<e en="T" t="00082111" n="Derivation Description">@remove()</e>
+<e en="T" t="00102000" n="Medical Alerts">@remove()</e>
+<e en="T" t="0018A003" n="Contribution Description">@remove()</e>
+<e en="T" t="00080060" n="Modality">@keep()</e>
+<e en="T" t="00189075" n="Diffusion Directionality">@keep()</e>
+<e en="T" t="00189076" n="Diffusion Gradient Direction Sequence">@keep()</e>
+<e en="T" t="00189087" n="Diffusion b-value">@keep()</e>
+<e en="T" t="00189089" n="Diffusion Gradient Orientation">@keep()</e>
+<e en="T" t="00189117" n="MR Diffusion Sequence">@keep()</e>
+<e en="T" t="00189147" n="Diffusion Anisotropy Type">@keep()</e>
+<e en="T" t="001910e0" n="DTI diffusion directions">@keep()</e>
+<e en="T" t="001910df" n="DTI diffusion directions">@keep()</e>
+<e en="T" t="001910d9" n="Concatenated SAT DTI diffusion directions">@keep()</e>
+<e en="T" t="0021105a" n="Diffusion direction">@keep()</e>
+<e en="T" t="00431039" n="Slop_int_6... slop_int_9">@keep()</e>
+<e en="T" t="00181312" n="Phase encoding direction">@keep()</e>
+<e en="T" t="001910bb" n="image columns or rows ">@keep()</e>
+<e en="T" t="001910bc" n="image rows or columns">@keep()</e>
+<e en="T" t="001910bd" n="image slices">@keep()</e>
+<e en="T" t="00291010" n="Diffusion gradient information and coordinate frame">@keep()</e>
+<e en="T" t="0019000a" n="NumberOfImagesInMosaic">@keep()</e>
+<e en="T" t="0019000b" n="SliceMeasurementDuration">@keep()</e>
+<e en="T" t="0019000c" n="B_value">@keep()</e>
+<e en="T" t="0019000d" n="DiffusionDirectionality">@keep()</e>
+<e en="T" t="0019000e" n="DiffusionGradientDirection">@keep()</e>
+<e en="T" t="0019000f" n="GradientMode">@keep()</e>
+<e en="T" t="00190027" n="B_matrix">@keep()</e>
+<e en="T" t="00190028" n="BandwidthPerPixelPhaseEncode">@keep()</e>
+<e en="T" t="20011003" n="B_value">@keep()</e>
+<e en="T" t="20011004" n="Diffusion direction">@keep()</e>
+<e en="T" t="00189087" n="B_value">@keep()</e>
+<e en="T" t="00291001" n="Private Sequence">@keep()</e>
+<e en="T" t="00291090" n="Private Byte Data">@keep()</e>
+<e en="T" t="00189089" n="Diffusion Gradient Orientation">@keep()</e>
+<r en="T" t="curves">Remove curves</r>
+<r en="T" t="overlays">Remove overlays</r>
+<r en="T" t="privategroups">Remove private groups</r>
+</script>

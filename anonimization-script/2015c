@@ -1,0 +1,13 @@
+Added support for:
+    
+    + (0008,009C) : Consulting Physician's Name
+    + (0040,1104) : Person's Telecom Information
+    + (0008,009D) : Consulting Physician Identification Sequence
+    + (300C,0113) : Reason for Omission Description
+    + (0010,2155) : Patient's Telecom Information
+    + (0040,2011) : Order Callback Telecom Information
+    
+Updated Attribute Name:
+    
+    ^ (0040,1103) : Person's Telephone Numbers
+    ^ (0008,0096) : Referring Physician Identification Sequence
